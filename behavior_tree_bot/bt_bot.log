@@ -1,0 +1,2671 @@
+INFO:root:
+Sequence: High Level Ordering of Strategies
+| AlwaysSucceed
+| | Sequence: Offensive Strategy
+| | | AlwaysSucceed
+| | | | Sequence: Full Offense
+| | | | | Check: has_sufficiently_largest_fleet
+| | | | | LoopUntilFailed
+| | | | | | Action: attack_weakest_enemy_planet
+| | | LoopUntilFailed: Action: try_steal_cheap_planet
+| | | | Action: try_steal_cheap_planet
+| AlwaysSucceed
+| | Sequence: Defensive Strategy
+| | | LoopUntilFailed: Action: try_save_doomed_ally
+| | | | Action: try_save_doomed_ally
+| Sequence: Spread Strategy
+| | LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+| | | Action: spread_to_weakest_neutral_planet
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Failure
+DEBUG:root:Result: Sequence: Full Offense -> Failure
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 12 13.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 11 13.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 18 5.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 0 38.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 17 5.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 6 23.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Failure
+DEBUG:root:Result: Sequence: Full Offense -> Failure
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Failure
+DEBUG:root:Result: Sequence: Full Offense -> Failure
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Failure
+DEBUG:root:Result: Sequence: Full Offense -> Failure
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Failure
+DEBUG:root:Result: Sequence: Full Offense -> Failure
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 17 21.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Failure
+DEBUG:root:Result: Sequence: Full Offense -> Failure
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 12.0 120.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 17.0 125.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 22.0 130.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 27.0 135.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 5 23.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 9.0 117.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Failure
+DEBUG:root:Result: Sequence: Full Offense -> Failure
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 19.0 127.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 24.0 132.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 29.0 137.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 34.0 142.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 39.0 118.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:0 6 2.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 44.0 123.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 49.0 128.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 54.0 133.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 59.0 138.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 19 56.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:11 47.0 88.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:11 52.0 77.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:0 17 4.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:11 57.0 82.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:11 20 56.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:12 53.0 97.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:12 58.0 102.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:12 63.0 107.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:12 15 60.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:0 43.0 102.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:0 46.0 107.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:0 49.0 112.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 53.0 156.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:0 17 4.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 58.0 134.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:0 19 2.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 63.0 139.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 21 59.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:0 55.0 67.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:11 5 3.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:0 58.0 72.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:0 61.0 77.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:0 22 59.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:11 63.0 82.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:11 16 60.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:12 58.0 97.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:12 63.0 102.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:0 17 4.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:12 14 60.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:18 60.0 102.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:0 6 2.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:18 62.0 107.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:12 20 12.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:18 13 60.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 49.0 137.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 54.0 142.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 59.0 147.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 64.0 152.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 69.0 144.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:16 5 2.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 74.0 133.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:22 17 2.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 79.0 138.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:1 84.0 143.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 4 82.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Bad order:11 68.0 93.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Order:11 2 62.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Success
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Order:15 9 39.0
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Success
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:0 14 2.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:22 17 2.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:22 20 2.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:16 5 2.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:12 3 82.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:22 17 2.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Order:22 20 6.0
+DEBUG:root:Result: Action: try_save_doomed_ally -> Success
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:11 7 84.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:1 8 84.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Order:0 10 85.0
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: High Level Ordering of Strategies
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Full Offense
+DEBUG:root:Executing:Check: has_sufficiently_largest_fleet
+DEBUG:root:Result: Check: has_sufficiently_largest_fleet -> Success
+DEBUG:root:Executing:LoopUntilFailed
+DEBUG:root:Executing:Action: attack_weakest_enemy_planet
+DEBUG:root:Result: Action: attack_weakest_enemy_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed -> Success
+DEBUG:root:Result: Sequence: Full Offense -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:LoopUntilFailed: Action: try_steal_cheap_planet
+DEBUG:root:Executing:Action: try_steal_cheap_planet
+DEBUG:root:Result: Action: try_steal_cheap_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_steal_cheap_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:AlwaysSucceed
+DEBUG:root:Executing:Sequence: Defensive Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: try_save_doomed_ally
+DEBUG:root:Executing:Action: try_save_doomed_ally
+DEBUG:root:Result: Action: try_save_doomed_ally -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: try_save_doomed_ally -> Success
+DEBUG:root:Result: Sequence: Defensive Strategy -> Success
+DEBUG:root:Result: AlwaysSucceed -> Success
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:LoopUntilFailed: Action: spread_to_weakest_neutral_planet
+DEBUG:root:Executing:Action: spread_to_weakest_neutral_planet
+DEBUG:root:Result: Action: spread_to_weakest_neutral_planet -> Failure
+DEBUG:root:Result: LoopUntilFailed: Action: spread_to_weakest_neutral_planet -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Sequence: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
