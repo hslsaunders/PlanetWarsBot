@@ -2,34 +2,56 @@ import sys
 from heapq import heappush, heappop
 sys.path.insert(0, '../')
 from planet_wars import issue_order
+from math import ceil
 import logging, traceback, sys, os, inspect
 logging.basicConfig(filename=__file__[:-3] +'.log', filemode='w', level=logging.DEBUG)
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 
+def get_total_ally_ships_in_planets(state):
+    return sum(planet.num_ships for planet in state.my_planets())
+
+def get_total_enemy_ships_in_planets(state):
+    return sum(planet.num_ships for planet in state.my_planets())
+def get_total_ally_ships(state):
+    return get_total_ally_ships_in_planets(state) + sum(fleet.num_ships for fleet in state.my_fleets())
+
+def get_total_enemy_ships(state):
+    return sum(planet.num_ships for planet in state.enemy_planets()) + sum(fleet.num_ships for fleet in state.enemy_fleets())
+
+def get_safe_future_adjusted_planet_ship_sum(state, planet):
+    future_ships, future_owner = get_future_planet_ships_and_owner(planet, state, 0)
+    if future_owner == 1:
+        if future_ships < planet.num_ships:
+            return future_ships
+        else:
+            return planet.num_ships
+    else:
+        return -future_ships
+
+def get_safe_future_adjusted_ship_sum(state):
+    adjusted_sum = 0
+    for planet in state.my_planets():
+        adjusted_sum += get_safe_future_adjusted_planet_ship_sum(state, planet)
+    return adjusted_sum
+
 def clamp(num, min_value, max_value):
     return max(min(num, max_value), min_value)
 
 # https://gist.github.com/Kodagrux/5b39358d812c0fd8eaf4
+def remap_unconstrained(value, minInput, maxInput, minOutput, maxOutput):
+    inputSpan = maxInput - minInput
+    outputSpan = maxOutput - minOutput
+
+    scaledThrust = float(value - minInput) / float(inputSpan)
+
+    return minOutput + (scaledThrust * outputSpan)
 def remap(value, minInput, maxInput, minOutput, maxOutput):
-	value = clamp(value, minInput, maxInput)
-
-	inputSpan = maxInput - minInput
-	outputSpan = maxOutput - minOutput
-
-	scaledThrust = float(value - minInput) / float(inputSpan)
-
-	return minOutput + (scaledThrust * outputSpan)
+    return remap_unconstrained(clamp(value, minInput, maxInput), minInput, maxInput, minOutput, maxOutput)
 
 # https://gist.github.com/laundmo/b224b1f4c8ef6ca5fe47e132c8deab56
 def lerp(a: float, b: float, t: float) -> float:
-    """Linear interpolate on the scale given by a to b, using t as the point on that scale.
-    Examples
-    --------
-        50 == lerp(0, 100, 0.5)
-        4.2 == lerp(1, 5, 0.8)
-    """
     return (1 - t) * a + t * b
 
 def get_future_planet_ships_and_owner(planet, state, time_later):
@@ -72,74 +94,78 @@ def get_future_planet_ships_and_owner(planet, state, time_later):
 def get_future_planet_ships_and_owner_from_source(planet, state, source_planet):
     return get_future_planet_ships_and_owner(planet, state, state.distance(planet.ID, source_planet.ID))
 
-def attack_weakest_enemy_planet(state):
-    # (1) If we currently have a fleet in flight, abort plan.
-    #if len(state.my_planets()) == 0:
-    #    return False
+def attack_strong_and_vulnerable_enemy_planet(state):
+    ship_sum = get_safe_future_adjusted_ship_sum(state)
 
-    # (2) Find my strongest planet.
-    strongest_planets = state.my_planets()
-    strongest_planets.sort(key=lambda t: t.num_ships)
-    strongest_planet = max(state.my_planets(), key=lambda t: t.num_ships, default=None)
-
-    # (3) Find the weakest enemy planet.
     target_planet_score = {}
     target_planet_ships_required = {}
-    if strongest_planet:
-        for planet in state.enemy_planets():
-            future_ships, future_owner = get_future_planet_ships_and_owner_from_source(planet, state, strongest_planet)
-            required_ships = future_ships + 1
-            if future_owner == 1:# or required_ships > strongest_planet.num_ships:
-                continue
-            score = remap(planet.growth_rate, 1, 5, 0, 3) + remap(required_ships, 1, 250, 4, 0)
-            target_planet_score[planet] = score
-            target_planet_ships_required[planet] = required_ships
-            #if required_ships < lowest_required_future_ships:
-            #    weakest_planet = planet
-            #    lowest_required_future_ships = required_ships
+    for planet in state.enemy_planets():
+        future_ships, future_owner = get_future_planet_ships_and_owner(planet, state, 0)
+        required_ships = future_ships + 1
+        if future_owner == 1 or required_ships > ship_sum:
+            continue
+        score = remap(planet.growth_rate, 1, 5, 0, 3) + remap(required_ships, 1, 250, 4, 0)
+        target_planet_score[planet] = score
+        target_planet_ships_required[planet] = required_ships
+
     if len(target_planet_score) == 0:
         return False
 
-    weakest_planet = max(target_planet_score, key=target_planet_score.get)
-    #weakest_planet = min(state.enemy_planets(), key=lambda t: get_future_planet_ships_and_owner_from_source(t, state, strongest_planet), default=None)
+    target_planet = max(target_planet_score, key=target_planet_score.get)
+    ships_required = target_planet_ships_required[target_planet]
 
-    if not strongest_planet or not weakest_planet:
-        # No legal source or destination
-        return False
-    else:
-        # (4) Send half the ships from my strongest planet to the weakest enemy planet.
-        #greatest_future_ships, owner = get_future_planet_ships_and_owner(weakest_planet, state, state.distance(strongest_planet.ID, weakest_planet.ID))
-        return issue_order(state, strongest_planet.ID, weakest_planet.ID, target_planet_ships_required[weakest_planet])
+    sorted_ally_planets = state.my_planets()
+    sorted_ally_planets.sort(key=lambda t: t.num_ships, reverse=True)
+
+    ships_accumulated = 0
+    planet_contributions = {}
+    allowed_contributions = {}
+    allowed_contributions_sum = 0
+    index = 0
+    while ships_accumulated < ships_required:
+        planet = sorted_ally_planets[index]
+        if planet not in allowed_contributions:
+            future_ships, future_owner = get_future_planet_ships_and_owner(planet, state, 0)
+            if future_owner != 1:
+                allowed_contribution = 0
+            else:
+                allowed_contribution = get_safe_future_adjusted_planet_ship_sum(state, planet)
+            allowed_contributions[planet] = allowed_contribution
+        else:
+            allowed_contribution = allowed_contributions[planet]
+        allowed_contributions_sum += allowed_contribution
+        current_contributions = planet_contributions[planet] if planet in planet_contributions else 0
+        contribution = min(ceil((allowed_contribution - current_contributions) / 2), ships_required - ships_accumulated)
+        ships_accumulated += contribution
+        planet_contributions[planet] = current_contributions + contribution
+        index = (index + 1) % len(sorted_ally_planets)
+        if index == 0 and allowed_contributions_sum < ships_required:
+            return False
+
+    for planet in planet_contributions:
+        if not issue_order(state, planet.ID, target_planet.ID, planet_contributions[planet]):
+            return False
+    return True
 
 def spread_to_weakest_neutral_planet(state):
-    # (1) If we currently have a fleet in flight, just do nothing.
-    #if len(state.my_fleets()) >= 1:
-    #    return False
-
-    # (2) Find my strongest planet.
-    #strongest_planet = max(state.my_planets(), key=lambda p: p.num_ships, default=None)
-    #logging.debug("strongest planet: {}".format(strongest_planet))
-
-    # (3) Find the weakest neutral planet.
-    #weakest_planet = min(state.neutral_planets(), key=lambda p: p.num_ships, default=None)
-    #closest_planet = min(state.neutral_planets(), key=lambda p: state.distance(strongest_planet.ID, p.ID), default=None)
-
-    #if strongest_planet is None:
-    #    return False
-
     target_planet_score = {}
     attack_source_and_cost = {}
     for neutral_planet in state.neutral_planets():
         assigned_score = False
         for ally_planet in state.my_planets():
             dist = state.distance(ally_planet.ID, neutral_planet.ID)
+            closest_dist_to_enemy = float('inf')
+            for enemy_planet in state.enemy_planets():
+                neutral_to_enemy_dist = state.distance(enemy_planet.ID, neutral_planet.ID)
+                if neutral_to_enemy_dist < closest_dist_to_enemy:
+                    closest_dist_to_enemy = neutral_to_enemy_dist
+
             future_ships, future_owner = get_future_planet_ships_and_owner(neutral_planet, state, dist)
             growth_rate = neutral_planet.growth_rate
-            score = remap(dist, 0, 30, 1, 0) + remap(future_ships, 0, 200, 4, 0) + remap(growth_rate, 1, 5, 0, 2.5)
-            #logging.debug("{}: dist: {}, num ships: {}, growth rate: {}, score: {}".format(neutral_planet.ID, dist, future_ships, growth_rate, score))
-            #logging.debug("{}: actual ships {}, vs projected ships: {}, old owner: {}, new owner: {}".format(neutral_planet.ID, neutral_planet.num_ships, future_ships, neutral_planet.owner, future_owner))
+            score = remap_unconstrained(dist, 0, 15, 1, -2) + remap(future_ships, 0, 200, 4, 0) + remap(growth_rate, 1, 5, 0, 2.5) + remap(closest_dist_to_enemy, 0, 15, -2, 0)
             num_ships_required = future_ships + 1
-            if future_owner == 1 or num_ships_required >= ally_planet.num_ships:
+
+            if future_owner == 1 or num_ships_required >= get_safe_future_adjusted_planet_ship_sum(state, ally_planet):
                 continue
             if not assigned_score:
                 target_planet_score[neutral_planet] = score
@@ -152,39 +178,45 @@ def spread_to_weakest_neutral_planet(state):
 
     target_planet = max(target_planet_score, key=target_planet_score.get, default=None)
     if target_planet is None:
-        # No legal source or destination
         return False
 
     source_planet, num_ships = attack_source_and_cost[target_planet]
 
-    #if strongest_planet.num_ships > 15:
-    # (4) Send half the ships from my strongest planet to the weakest enemy planet.
-    #num_ships = attack_source_and_cost[target_planet]#min(strongest_planet.num_ships / 2, target_planet.num_ships + 3)
-    #logging.debug("sending {} to {}".format(num_ships, target_planet.ID))
     return issue_order(state, source_planet.ID, target_planet.ID, num_ships)
 
 def try_steal_cheap_planet(state):
-    cheapest_planet = None
-    source_planet = None
-    num_ships = 9999
-    shortest_dist_to_planet = {}
+    planet_costs = {}
     for enemy_planet in state.enemy_planets():
+        shortest_dist_to_planet = float('inf')
         for ally_planet in state.my_planets():
             dist = state.distance(enemy_planet.ID, ally_planet.ID)
-            if enemy_planet not in shortest_dist_to_planet or dist < shortest_dist_to_planet[enemy_planet]:
-                shortest_dist_to_planet[enemy_planet] = dist
+            if dist < shortest_dist_to_planet:
+                shortest_dist_to_planet = dist
 
-            future_planet_ships, owner = get_future_planet_ships_and_owner_from_source(enemy_planet, state, ally_planet)
+            future_planet_ships, my_future_owner = get_future_planet_ships_and_owner_from_source(enemy_planet, state, ally_planet)
             required_ships = future_planet_ships + 1
-            if owner == 1:
+            ally_planet_num_ships_cutoff = ally_planet.num_ships * 0.25
+            if my_future_owner == 1:
                 continue
-            if required_ships <= ally_planet.num_ships * 0.25 and required_ships < num_ships:
-                cheapest_planet = enemy_planet
-                source_planet = ally_planet
-                num_ships = required_ships
+
+            my_future_ships, my_future_owner = get_future_planet_ships_and_owner(ally_planet, state, 0)
+            if my_future_owner != 1:
+                continue
+            if required_ships <= ally_planet_num_ships_cutoff and (enemy_planet not in planet_costs or required_ships < planet_costs[enemy_planet][0]):
+                planet_costs[enemy_planet] = required_ships, ally_planet
+
+        if shortest_dist_to_planet > 15 and enemy_planet in planet_costs:
+            del planet_costs[enemy_planet]
+
+    if len(planet_costs) == 0:
+        return False
+
+    cheapest_planet = min(planet_costs, key=planet_costs.get)
+
     if cheapest_planet is None:
         return False
 
+    num_ships, source_planet = planet_costs[cheapest_planet]
     return issue_order(state, source_planet.ID, cheapest_planet.ID, num_ships)
 
 def try_save_doomed_ally(state):
@@ -204,11 +236,5 @@ def try_save_doomed_ally(state):
     if not cheapest_rescuer:
         return False
     return issue_order(state, cheapest_rescuer.ID, target.ID, fewest_ships)
-
-
-def spread_to_weakest_ally(state):
-    score = {}
-    #for planet in state.my_planets():
-    #    score =
 
 
